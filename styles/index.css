@@ -1,0 +1,26 @@
+body {
+    box-sizing: border-box;
+}
+
+.play {
+    /* display: grid;
+    border: solid 5px red;
+    grid-gap: 20px;
+    justify-items: center;
+    margin: auto 200px; *
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "img img img img"; */
+
+    /* height:205px;
+    width: 100%;
+    width: 100vw;*/
+    /* background-position:left top; 
+    
+    background-image:url(../images/header_img.jpg);
+    background-repeat:no-repeat;
+    background-size:cover; */
+
+    width: 100vw;
+    height: 500px;
+    background: url(../images/kapadocja.JPG) no-repeat center / cover padding-box border-box;
+}
