@@ -2,25 +2,43 @@ body {
     box-sizing: border-box;
 }
 
-.play {
-    /* display: grid;
-    border: solid 5px red;
-    grid-gap: 20px;
-    justify-items: center;
-    margin: auto 200px; *
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "img img img img"; */
-
-    /* height:205px;
-    width: 100%;
-    width: 100vw;*/
-    /* background-position:left top; 
-    
-    background-image:url(../images/header_img.jpg);
-    background-repeat:no-repeat;
-    background-size:cover; */
-
+.thema_img {
     width: 100vw;
     height: 500px;
-    background: url(../images/kapadocja.JPG) no-repeat center / cover padding-box border-box;
+    background: rgba(0,0,0.5) url(../images/kapadocja.JPG) no-repeat center / cover padding-box border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thema_img h1 {
+    font-family: 'Cinzel', serif;
+}
+
+.exemplary_content {
+    height: 400px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+    /* border: red solid 5px; */
+}
+
+.exemplary_item {
+    border: green solid 5px;
+}
+
+.about_me {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.me_img {
+    /* width: 100vw;
+    height: 500px;
+    background: rgba(0,0,0.5) url(../images/kapadocja.JPG) no-repeat center / cover padding-box border-box; */
+    min-height: 200px;
+    background: white url(../images/me.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
