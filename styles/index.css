@@ -1,5 +1,11 @@
-body {
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* box-sizing: border-box; */
 }
 
 p {
@@ -8,30 +14,27 @@ p {
     text-align-last: center;
 }
 
-header {
-    z-index: 100;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0; 
-}
-
-header ul {
+nav ul {
+    border: solid 1px red;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #fff;
 }
 
-header li a{
-    display: block;
+/*header*/ li a{
+    /* display: block; */
     text-decoration: none;
     color: black;
 }
 
-header li a:hover{
+/*header*/ li a:hover{
     background-color: yellow;
 }
 
@@ -68,19 +71,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about_me {
+    border: green solid 5px;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
     overflow: hidden;
-    /* justify-items: center; */
+    justify-items: center;
     
 }
 
 .me_img {
-    /* border: pink solid 5px; */
+    border: pink solid 5px;
     min-height: 200px;
     background: white url(../images/me2.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
