@@ -5,7 +5,11 @@
 }
 
 body {
-    /* box-sizing: border-box; */
+    background-image: linear-gradient(260deg, #fff 0%, #2376ae 100%);
+    background-size: cover;
+    /* padding-bottom: 60px; */
+    /* height: 100%; */
+    position: relative;
 }
 
 p {
@@ -16,7 +20,9 @@ p {
 }
 
 nav ul {
-    border: solid 1px red;
+    /* border: solid 1px red; */
+    z-index: 100;
+    background: rgba(255, 193, 30, 0.9);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -29,13 +35,12 @@ nav ul {
     padding: 0;
 }
 
-/*header*/ li a{
-    /* display: block; */
+nav li a{
     text-decoration: none;
     color: black;
 }
 
-/*header*/ li a:hover{
+nav li a:hover{
     background-color: yellow;
 }
 
@@ -57,11 +62,19 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Cinzel', serif;
 }
 
+.main_container
+{
+    /* border: red solid */
+    /* position: relative; */
+    /* min-height: 100vh; */
+}
+
 .exemplary_content {
-    position: relatvie;
+    /* min-height: 400px;
+    position: relatvie; */
     left: 200px;
     padding-top: 50px;
-    height: 400px;
+    /* height: 400px; */
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-gap: 20px;
@@ -74,15 +87,21 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 
-.about_me {
-    z-index: 100;
+.side_item {
+    /* z-index: 100; */
     /* border: green solid 5px; */
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
     justify-items: center;
     
+}
+
+.about_me {
+    background:rgba(255, 193, 30,0.9);
+    margin:20px;
+    padding:20px;
+    border-radius: 4px;
+    text-align: center;
 }
 
 .img_helper {
@@ -107,12 +126,21 @@ h1, h2, h3, h4, h5, h6 {
 	transform: scale(1.2);
 }
 
+.blog_entries {
+    background:rgba(255, 193, 30,0.9);
+    margin:20px;
+    padding:20px;
+    border-radius: 4px;
+  /* text-align: center; */
+    padding-bottom: 100px;
+    /* position: relative; */
+}
+
 footer {
-    position: fixed;
+    background-color: #0088b6;
+    color: white;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
  }
