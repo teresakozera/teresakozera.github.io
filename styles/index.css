@@ -19,6 +19,10 @@ p {
     padding: 15px;
 }
 
+img {
+    max-width: 100%;
+  }
+
 nav ul {
     /* border: solid 1px red; */
     z-index: 100;
@@ -87,6 +91,29 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 
+.main_pane {
+    display: flex;
+    flex-direction: column;
+}
+
+.main_pane_gallery {
+    /* display: flex; */
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-around;
+    /* justify-items: end; */
+}
+
+.main_pane_gallery h1 {
+    grid-column: 1 / -1;
+    /* align-items: center; */
+  }
+
+  .main_pane_gallery p {
+    grid-column: 1 / -1;
+  }
+
 .side_item {
     /* z-index: 100; */
     /* border: green solid 5px; */
@@ -128,13 +155,132 @@ h1, h2, h3, h4, h5, h6 {
 
 .blog_entries {
     background:rgba(255, 193, 30,0.9);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     margin:20px;
     padding:20px;
     border-radius: 4px;
-  /* text-align: center; */
+    /* text-align: center; */
     padding-bottom: 100px;
     /* position: relative; */
 }
+
+.snap1 {
+    animation-name: scale;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+.snap2 {
+    animation-name: opacity;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 8s;
+}
+
+.snap3 {
+    animation-name: rotate;
+    animation-duration: 4s; /* or: Xms */
+    animation-iteration-count: 1;
+    animation-direction: alternate; /* or: normal */
+    animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+    animation-fill-mode: forwards; /* or: backwards, both, none */
+    animation-delay: 18s; /* or: Xms */
+}
+
+.snap4 {
+    position:relative;
+    height:auto;
+    width:100%;
+    margin:0 auto;
+  }
+
+.snap4 img{
+    position:absolute;
+    left:0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.snap4 img.top {
+    animation-name: overlay;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 2;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-delay: 24s;
+}
+
+.snap5 {
+    animation-name: skew;
+    animation-duration: 4s; 
+    animation-iteration-count: 1;
+    animation-direction: alternate; 
+    animation-timing-function: ease-out; 
+    animation-fill-mode: forwards; 
+    animation-delay: 36s;
+}
+
+@keyframes skew {
+    from {
+        transform: scale(0.8) rotate(-360deg) skew(-10deg, 0deg);
+      }
+      to {
+        transform: scale(1.0);
+      }
+      
+  }
+
+@keyframes scale {
+    0%  {
+        transform: scale(1.2);
+      }
+      50%  {
+        transform: scale(0.9);
+      }
+      100% { transform: scale(1.0);}
+      
+  }
+
+  @keyframes opacity {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }      
+  }
+
+  @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+  }
+
+  @keyframes overlay {
+    0% {
+    opacity:1;
+  }
+  45% {
+  opacity:1;
+  }
+  55% {
+  opacity:0;
+  }
+  100% {
+  opacity:0;
+  }
+  }
 
 footer {
     background-color: #0088b6;
