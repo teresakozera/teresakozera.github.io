@@ -114,6 +114,16 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 1 / -1;
   }
 
+  .contact_form {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .contact_form > textarea {
+    /* padding-left: 15px; */
+    flex: 1;
+  }
+
 .side_item {
     /* z-index: 100; */
     /* border: green solid 5px; */
