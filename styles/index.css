@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .thema_img {
-    width: 100vw;
+    /* width: 100vw; */
     height: 500px;
     background: rgba(0,0,0.5) url(../images/kapadocja.JPG) no-repeat center / cover padding-box border-box;
     display: flex;
@@ -71,6 +71,7 @@ h1, h2, h3, h4, h5, h6 {
     /* border: red solid */
     /* position: relative; */
     /* min-height: 100vh; */
+    padding-bottom: 50px;
 }
 
 .exemplary_content {
@@ -98,11 +99,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .main_pane_gallery {
     /* display: flex; */
+    /* display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-around;
+    border: solid red 1px; */
+    /* justify-items: end; */
+}
+
+.gallery-wrapper {
+    background:rgba(255, 193, 30,0.9);
+    margin:20px;
+    padding:20px;
+    border-radius: 4px;
+    text-align: center;
+    
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(5, 1fr);
     justify-content: space-around;
-    /* justify-items: end; */
 }
 
 .main_pane_gallery h1 {
@@ -122,6 +137,7 @@ h1, h2, h3, h4, h5, h6 {
   .contact_form > textarea {
     /* padding-left: 15px; */
     flex: 1;
+    /* border: solid red 1px; */
   }
 
 .side_item {
